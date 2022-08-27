@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using Application.Features.Brands.Rules;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
@@ -12,7 +13,7 @@ namespace Application
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddMediatR(Assembly.GetExecutingAssembly());
 
-           // services.AddScoped<SomeFeatureEntityBusinessRules>();
+           services.AddScoped<BrandBusinessRules>();
 
             //services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             //services.AddTransient(typeof(IPipelineBehavior<,>), typeof(AuthorizationBehavior<,>));
